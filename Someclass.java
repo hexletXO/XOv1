@@ -1,6 +1,5 @@
 package gameXO;
 
-<<<<<<< HEAD
 import java.util.Scanner;
 
 
@@ -45,7 +44,7 @@ public class Someclass {
 	}
 	
 	public byte getFromConsoleSizeOfArr() {
-		System.out.println("Введите размер поля для игры, от " + MINSIZEOFARR +" до " +MAXSIZEOFARR +":" );
+		System.out.println("Vvedite razmer polya, ot " + MINSIZEOFARR +" do " +MAXSIZEOFARR +":" );
 		scanner = new Scanner(System.in);
 		byte vul7 = scanner.nextByte();
 		if ((vul7 >= MINSIZEOFARR) && (vul7 <= MAXSIZEOFARR)) {
@@ -56,8 +55,8 @@ public class Someclass {
 	}
 	
 	public boolean checkForSign(int c, int v) {
-		if (field[c][v] > 0) {System.out.println("Победа крестиков");}
-		else {System.out.println("Победа ноликов");}
+		if (field[c][v] > 0) {System.out.println("Pobeda krestikov ;)");}
+		else {System.out.println("Pobeda nolikov :)");}
 		return true;
 	}
 	
@@ -120,7 +119,7 @@ public class Someclass {
 	
 	public void questionForInputType() {
 		byte val3 = 1;
-		System.out.println("Выберите режим игры: 1.Заполнение случайным образом. 2. Человек против человека.");		
+		System.out.println("Viberite rezhim: 1.Zapolnenie sluchaino. 2. Person vs Person.");		
 		val3 = getFromConsoleInputType();
 		if (val3 == 1) {setArrByRand();} 
 		if (val3 == 2) {setArrByConsole();} 
@@ -129,14 +128,14 @@ public class Someclass {
 	public void questionForXY() {
 		String str;
 		if ((vul6 % 2) == 0) {
-			str = "Ход крестиков, ";
+			str = "Hod krestikov, ";
 		} else {
-			str = "Ход ноликов, ";
+			str = "Hod nolikov, ";
 		}
 		scanner = new Scanner(System.in);
-		System.out.println(str +"Введите столбец, от 1 до " + (sizeOfArr - 2));
+		System.out.println(str +"Vvedite stolbec, ot 1 do " + (sizeOfArr - 2));
 		vul4 = scanner.nextByte();
-		System.out.println(str +"Введите строку, от 1 до " + (sizeOfArr - 2));
+		System.out.println(str +"Vvedite stroku, ot 1 do " + (sizeOfArr - 2));
 		vul5 = scanner.nextByte();
 	}
 	
@@ -144,9 +143,9 @@ public class Someclass {
 		questionForXY();
 		if (field[vul4][vul5] != 0) {
 			if (field[vul4][vul5] > 0) {
-				System.out.println("Здесь уже стоит крестик");
+				System.out.println("Zdes uzhe stoit krestik");
 			} else {
-				System.out.println("Здесь уже стоит нолик");
+				System.out.println("Zdes uzhe stoit nolik");
 			}
 			getXYFromConsole();
 		}
@@ -180,22 +179,10 @@ public class Someclass {
 		if ((d == sizeOfArr - 4) && (f == 3)) {field[sizeOfArr - 1][0] = field[d][f];}
 		if ((d == sizeOfArr - 4) && (f == sizeOfArr - 4)) {field[sizeOfArr - 1][sizeOfArr - 1] = field[d][f];}	
 		
-=======
-
-public class Someclass {
-	private static final int MAXCOUNT = 3;
-	private static final byte MAXOFRAND = 1;
-	
-	private byte[][] field = new byte[MAXCOUNT][MAXCOUNT];
-	
-	public void checkArr () {
-		  
->>>>>>> 855c7c6867a47c780f4f024fabb446210fccde70
 	}
 	
 	public void setArrByRand () {
 		byte val;
-<<<<<<< HEAD
 		for (int j = 1; j < sizeOfArr - 1; j++ ) {
 			for (int k = 1; k < sizeOfArr - 1; k++ ) {
 				getRandXY();
@@ -209,40 +196,20 @@ public class Someclass {
 				showRow();
 				System.out.println("");
 				if (checkForWin() == true) {System.exit(0);}
-=======
-		for (int j = 0; j < MAXCOUNT; j++ ) {
-			for (int k = 0; k < MAXCOUNT; k++ ) {
-				val = (byte) (Math.random()*(MAXOFRAND+1));
-				if (val == 0) {
-					field[j][k] = -1;
-				} else {
-					field[j][k] = val;
-				}
->>>>>>> 855c7c6867a47c780f4f024fabb446210fccde70
 			}
 		}
 	}
 	
-<<<<<<< HEAD
 	public void setArrBy(byte i) {
 		for (int j = 0; j < sizeOfArr; j++ ) {
 			for (int k = 0; k < sizeOfArr; k++ ) {
-=======
-	public void setArr(byte i) {
-		for (int j = 0; j < MAXCOUNT; j++ ) {
-			for (int k = 0; k < MAXCOUNT; k++ ) {
->>>>>>> 855c7c6867a47c780f4f024fabb446210fccde70
 				field[j][k] = i;
 			}
 		}
 	}
 	
 	public void showCell(int i){
-<<<<<<< HEAD
 		for (int p = 0; p < sizeOfArr; p++) {
-=======
-		for (int p = 0; p < MAXCOUNT; p++) {
->>>>>>> 855c7c6867a47c780f4f024fabb446210fccde70
 			System.out.print("[");
 			if (field[i][p] == -1) {
 				System.out.print("O");				
@@ -260,11 +227,7 @@ public class Someclass {
 	}
 	
 	public void showRow() { 
-<<<<<<< HEAD
 		for (int i = 0; i < sizeOfArr; i++) {
-=======
-		for (int i = 0; i < MAXCOUNT; i++) {
->>>>>>> 855c7c6867a47c780f4f024fabb446210fccde70
 			showCell(i);
 			System.out.println();
 		}
