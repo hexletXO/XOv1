@@ -165,7 +165,7 @@ public class Someclass {
 			System.out.println("");
 			if (checkForWin() == true) {System.exit(0);}
 		}
-		System.out.println("Ничья >:O");
+		System.out.println("Net pobeditelya >:O");
 	}
 	
 	public void magicQQ(int d, int f) {
