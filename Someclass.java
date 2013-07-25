@@ -209,7 +209,7 @@ public class Someclass {
 	}
 	
 	public void showCell(int i){
-		for (int p = 0; p < sizeOfArr; p++) {
+		for (int p = 1; p < sizeOfArr- 1; p++) {
 			System.out.print("[");
 			if (field[i][p] == -1) {
 				System.out.print("O");				
@@ -227,7 +227,7 @@ public class Someclass {
 	}
 	
 	public void showRow() { 
-		for (int i = 0; i < sizeOfArr; i++) {
+		for (int i = 1; i < sizeOfArr - 1; i++) {
 			showCell(i);
 			System.out.println();
 		}
